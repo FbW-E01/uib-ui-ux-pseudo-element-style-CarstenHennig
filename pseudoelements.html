@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        li::before {
+            content: "❝";
+            color: lightblue;
+        }
+
+        li::after {
+            content: "❝";
+            color: lightblue;
+        }
+
+        .pdf::after {
+            content: " ";
+            background-image: url(./images/pdf.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-size: 35px;
+        }
+
+        .xls::after {
+            content: " ";
+            background-image: url(./images/ms-excel.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-size: 35px;
+        }
+
+        .doc::after {
+            content: " ";
+            background-image: url(./images/ms-word.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-size: 35px;
+        }
+
+
+        p:before {
+            content: "";
+            display: inline-block;
+            background-image: linear-gradient(to right, blue, yellow);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100%;
+            height: 12px;
+        }
+
+        p:after {
+            content: "";
+            background-image: linear-gradient(to right, yellow, blue);
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: 100%;
+            width: 100%;
+            height: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, voluptatibus vero aspernatur quis nam
+            cumque ipsum? Voluptatibus dolore perspiciatis possimus earum placeat deserunt quae. Quas facere cumque
+            nulla placeat vero.
+        </li>
+        <li>
+            Mollitia, hic corporis tempore officia cumque quia temporibus quae recusandae alias, consequatur debitis?
+            Sed consectetur veniam enim laudantium tenetur aliquid repellat sunt deleniti quos, id impedit
+            reiciendis laborum mollitia eaque.
+        </li>
+        <li>
+            Ipsum doloremque, animi consequatur accusamus tempore reiciendis necessitatibus, aperiam, culpa labore
+            vel voluptatum. Nihil, exercitationem eaque? Laudantium quod, facere aspernatur placeat delectus ducimus
+            hic, veniam modi voluptates voluptatem, necessitatibus obcaecati?
+        </li>
+        <li>
+            Rerum quod doloribus obcaecati aperiam aut sed nihil necessitatibus esse beatae facilis dolorum possimus
+            expedita molestias natus maxime, fugit accusamus consequatur atque delectus! Esse cumque dignissimos
+            officia corporis tenetur? Cum.
+        </li>
+        <li>
+            Repellendus repudiandae inventore perspiciatis quidem commodi cumque eligendi fugiat temporibus
+            doloremque vero voluptatibus mollitia ad, architecto explicabo odit consequuntur voluptatem? Aut maiores
+            necessitatibus laboriosam architecto rem suscipit et animi quod?
+        </li>
+    </ul>
+    <ul>
+        <li class="pdf">File 1.pdf</li>
+        <li class="xls">File 2.xls</li>
+        <li class="doc">File 3.doc</li>
+        <li class="doc">File 4.doc</li>
+        <li class="pdf">File 5.pdf</li>
+    </ul>
+
+    <div class="gradient-sandwich">
+        <p class="sandwich">
+            Bread<br>
+            Cheese<br>
+            Bread</p>
+    </div>
+
+    <div>
+        <p>Some other staff</p>
+    </div>
+</body>
+
+</html>
